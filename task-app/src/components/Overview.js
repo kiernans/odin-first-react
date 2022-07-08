@@ -1,20 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Overview extends Component {
-    constructor(props) {
-        super(props);
-    }
+const Overview = (props) => {
+    const { tasks } = props;
 
-    render() {
-        const { onButtonClicked } = this.props;
-
-        return (
-            <div>
-                <input></input>
-                <button onClick={this.onButtonClicked}></button>
-            </div>
-        );
-    };
+    return (
+        <ul>
+            {tasks.map((task) => <li key={task.id}>{task.text}</li>)}
+        </ul>
+    );
 };
 
 export default Overview;
