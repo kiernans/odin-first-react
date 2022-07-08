@@ -6,9 +6,12 @@ class Overview extends Component {
     }
 
     render() {
+        const { onButtonClicked } = this.props;
+
         return (
             <div>
-
+                <input></input>
+                <button onClick={this.onButtonClicked}></button>
             </div>
         );
     };
